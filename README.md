@@ -31,5 +31,5 @@ The code was tested on:
     ### Command to uninstall rust
     rustup self uninstall
 
-## Command to run program: 
-`cargo run`
+## Command to build project: 
+`make all`
