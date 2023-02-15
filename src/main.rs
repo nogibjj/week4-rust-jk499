@@ -1,5 +1,14 @@
 use std::io;
 
+fn factorial(n: u64) -> u64 {
+    if n == 0 {
+        //base case
+        1
+    } else {
+        n * factorial(n - 1)
+    }
+}
+
 fn main() {
     println!("Enter number: ");
     let mut num = String::new();
@@ -8,17 +17,5 @@ fn main() {
         .trim()
         .parse::<u64>()
         .expect("Invalid number. Please enter again.");
-
-    let fact = factorial(n);
-
-    println!("Factorial of {} is {}", n, fact);
-}
-
-fn factorial(n: u64) -> u64 {
-    //base case
-    if n == 0 {
-        1
-    } else {
-        n * factorial(n - 1)
-    }
+    println!("Factorial of {} is {}", n, factorial(n));
 }
